@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>TuterExpert</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    
+  </welcome-file-list>
+  
+<servlet>
+<servlet-name>Teacher</servlet-name>
+<servlet-class>Controller.TeacherController</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Teacher</servlet-name>
+<url-pattern>/AddTeacherAccount</url-pattern>
+<url-pattern>/TeacherSignin</url-pattern>
+<url-pattern>/LogoutTeacher</url-pattern>
+<url-pattern>/AddSubjects</url-pattern>
+<url-pattern>/TutorUpdate</url-pattern>
+<url-pattern>/UploadProfile</url-pattern>
+<url-pattern>/AddAreas</url-pattern>
+
+</servlet-mapping>
+
+  
+  <servlet>
+  <servlet-name>Admin</servlet-name>
+  <servlet-class>Controller.AdminController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>Admin</servlet-name>
+  <url-pattern></url-pattern>
+
+   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Student</servlet-name>
+    <servlet-class>Controller.StudentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Student</servlet-name>
+    <url-pattern>/StudentSubmit</url-pattern>
+    <url-pattern>/ApplyTutor</url-pattern>
+   
+  </servlet-mapping>
+  
+  
+</web-app>
